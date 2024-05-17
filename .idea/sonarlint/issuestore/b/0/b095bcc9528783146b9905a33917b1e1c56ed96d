@@ -1,0 +1,32 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’‹Áşüÿÿÿÿ
+e
+java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(™ˆš
+j
+java:S2095d"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ãèàøÿÿÿÿ
+e
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Íºì×
+e
+java:S2095q"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¬İ š
+e
+java:S2095O"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Íºì×
+M
+java:S1135("2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+M
+java:S1135/"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+M
+java:S1135@"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+M
+java:S1135I"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+5
+java:S6905K"Don't use the query "SELECT *".(®æù†
+M
+java:S1135T"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+C
+java:S1125X"(Remove the unnecessary boolean literals.(ıêİûÿÿÿÿ
+5
+java:S6905`"Don't use the query "SELECT *".(†õ
+5
+java:S6905p"Don't use the query "SELECT *".(ÎÆÁ‡
+H
+java:S1135"2Complete the task associated to this TODO comment.(‡ñÅ¼

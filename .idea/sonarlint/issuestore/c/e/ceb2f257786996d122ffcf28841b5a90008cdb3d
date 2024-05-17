@@ -1,0 +1,27 @@
+
+–
+java:S2293Â"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÁÍî­J$c6c903c0-52ea-4b1e-afa1-d0aaf770ea37
+–
+java:S2293É"YReplace the type specification in this constructor call with the diamond operator ("<>").(”ìç½J$f7bc2aeb-3646-487e-a29c-32437d494180
+‰
+java:S1192e"HDefine a constant instead of duplicating this literal "Ãœye Ol" 3 times.(úıÇ•üÿÿÿÿJ$3df4b6ba-2748-4fc5-a101-bf82a9d72d55
+Œ	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ØË*J$216d176a-a3f4-44e1-9d8f-d157bac86265
+i
+java:S16042"(Make this anonymous inner class a lambda(¤©ÒâüÿÿÿÿJ$16f4c7ee-f5d1-4dd7-8586-3a832fa1392a
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ñÛJ$0641f015-95e9-401c-b11b-22ccbe34b98c
+Š
+java:S3252D"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿJ$4a95fe4d-6d64-42a6-a765-72b53ebf77aa
+q
+java:S1481X"0Remove this unused "signUpPanel" local variable.(ï—¯şÿÿÿÿJ$40f29515-ef90-4b27-95c8-c2d81b43d7a9
+
+java:S3252`">Use static access with "javax.swing.SwingConstants" for "TOP".(û“ÍÉûÿÿÿÿJ$01ee7443-88f9-4ead-a2d2-b4a968169fcf
+l	java:S106µ"+Replace this use of System.out by a logger.(Œ‰×àşÿÿÿÿJ$515a1d2a-a611-40df-8029-bf897e079be5
+g	java:S106¼"+Replace this use of System.out by a logger.(‚ü›¥J$d44ac408-b300-4815-9eca-91ea3f034c45
+f	java:S106„"+Replace this use of System.out by a logger.(ü¯ÔbJ$86579735-2453-428f-a2b7-f3ad4b261f81
+g	java:S106‹"+Replace this use of System.out by a logger.(ÉºËJ$1538e4d9-3e75-4fe6-90c5-dbef7a6897fc
+r
+java:S1481»"0Remove this unused "columnNames" local variable.(¾ÎÅìşÿÿÿÿJ$f4df8b08-2c26-45be-aefb-cf9872377fa3
+l	java:S106È"+Replace this use of System.out by a logger.(¶®éÓøÿÿÿÿJ$64369623-e990-4d87-8a37-67d1f6eea5ca
+g	java:S106Í"+Replace this use of System.out by a logger.(÷¥¼J$6be1ece5-58d3-478b-afee-ec4820f6e9c4
+s
+java:S1068+"7Remove this unused "passengerRepository" private field.(ñĞJ$4ca8dc64-ad3f-4e53-800b-d8e0312d0c8f

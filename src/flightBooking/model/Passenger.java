@@ -12,10 +12,10 @@ public class Passenger {
 	private String email; 
 	private String phoneNumber; 
 	private String password;
-	private List<Long> flights = new ArrayList<Long>();
+	private List<Ticket> tickets;
 	
 	public Passenger(long passengerId, String firstName, String lastName, String tcNumber, String email,
-			String phoneNumber, String password) {
+			String phoneNumber, String password, List<Ticket> tickets) {
 		this.passengerId = passengerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -23,8 +23,9 @@ public class Passenger {
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.password = password;
+		this.tickets = tickets;
 	}
-
+	
 	public long getPassengerId() {
 		return passengerId;
 	}
@@ -81,14 +82,14 @@ public class Passenger {
 		this.password = password;
 	}
 
-	public List<Long> getFlights() {
-		return flights;
+	public List<Ticket> getTickets() {
+		return tickets;
 	}
 
-	public void setFlights(List<Long> flights) {
-		this.flights = flights;
+	public void setTickets(List<Ticket> tickets) {
+		this.tickets = tickets;
 	}
-	
+
 	
 	
 }

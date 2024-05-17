@@ -11,9 +11,9 @@ public class DatabaseConnection {
 
 	private DatabaseConnection() throws SQLException {
 		// Replace with your connection details
-		String url = "jdbc:mysql://localhost:3306/your_database_name";
-		String username = "your_username";
-		String password = "your_password";
+		String url = "jdbc:mysql://localhost:3306/flight_booking";
+		String username = "root";
+		String password = "mysqlpasswd";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

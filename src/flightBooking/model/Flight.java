@@ -1,53 +1,54 @@
 package flightBooking.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Flight {
 	
-	private long flighId;
-	private String cityFrom;
-	private String cityTo;
+	private long flightId;
+	private int cityDepartureId;
+	private int cityDestinationId;
 	private int capacity;
 	private int bookedSeats;
-	private LocalDateTime departureTime;
-	private LocalDateTime estimatedArrivalTime;
+	private LocalDate departureTime;
+	private LocalDate estimatedArrivalTime;
 	
-	public Flight(long flighId, String cityFrom, String cityTo, int capacity, int bookedSeats,
-			LocalDateTime departureTime, LocalDateTime estimatedArrivalTime) {
+	public Flight(long flightId, int cityDepartureId, int cityDestinationId, int capacity, int bookedSeats,
+			LocalDate departureTime, LocalDate estimatedArrivalTime) {
 		super();
-		this.flighId = flighId;
-		this.cityFrom = cityFrom;
-		this.cityTo = cityTo;
+		this.flightId = flightId;
+		this.cityDepartureId = cityDepartureId;
+		this.cityDestinationId = cityDestinationId;
 		this.capacity = capacity;
 		this.bookedSeats = bookedSeats;
 		this.departureTime = departureTime;
 		this.estimatedArrivalTime = estimatedArrivalTime;
 	}
 
-	public long getFlighId() {
-		return flighId;
+	public long getFlightId() {
+		return flightId;
 	}
 
-	public void setFlighId(long flighId) {
-		this.flighId = flighId;
+	public void setFlightId(long flightId) {
+		this.flightId = flightId;
 	}
 
-	public String getCityFrom() {
-		return cityFrom;
+	public int getCityDepartureId() {
+		return cityDepartureId;
 	}
 
-	public void setCityFrom(String cityFrom) {
-		this.cityFrom = cityFrom;
+	public void setCityDepartureId(int cityDepartureId) {
+		this.cityDepartureId = cityDepartureId;
 	}
 
-	public String getCityTo() {
-		return cityTo;
+	public int getCityDestinationId() {
+		return cityDestinationId;
 	}
 
-	public void setCityTo(String cityTo) {
-		this.cityTo = cityTo;
+	public void setCityDestinationId(int cityDestinationId) {
+		this.cityDestinationId = cityDestinationId;
 	}
 
 	public int getCapacity() {
@@ -66,19 +67,19 @@ public class Flight {
 		this.bookedSeats = bookedSeats;
 	}
 
-	public LocalDateTime getDepartureTime() {
+	public LocalDate getDepartureTime() {
 		return departureTime;
 	}
 
-	public void setDepartureTime(LocalDateTime departureTime) {
+	public void setDepartureTime(LocalDate departureTime) {
 		this.departureTime = departureTime;
 	}
 
-	public LocalDateTime getEstimatedArrivalTime() {
+	public LocalDate getEstimatedArrivalTime() {
 		return estimatedArrivalTime;
 	}
 
-	public void setEstimatedArrivalTime(LocalDateTime estimatedArrivalTime) {
+	public void setEstimatedArrivalTime(LocalDate estimatedArrivalTime) {
 		this.estimatedArrivalTime = estimatedArrivalTime;
 	}
 
