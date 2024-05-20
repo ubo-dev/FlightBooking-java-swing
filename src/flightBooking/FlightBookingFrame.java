@@ -61,6 +61,8 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private final MockDataInitializer mockDataInitializer;
     private int numberOfPassengers = 0;
     private long flightId = 0;
+    private long passengerId = 0;
+    private boolean isLoggedIn = false;
     SpinnerNumberModel childModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     SpinnerNumberModel adultModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     SpinnerNumberModel babyModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
@@ -212,17 +214,40 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
-        jDialog1 = new javax.swing.JDialog();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel12 = new javax.swing.JLabel();
+        jDialog2 = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
         onaylaButton = new javax.swing.JButton();
         iptalButton = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jLabel13 = new javax.swing.JLabel();
+        signUpFrame = new javax.swing.JFrame();
+        jPanel12 = new javax.swing.JPanel();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        nameSignup = new javax.swing.JTextField();
+        surnameSignup = new javax.swing.JTextField();
+        emailSignup = new javax.swing.JTextField();
+        passwdSignup = new javax.swing.JTextField();
+        tcnoSignup = new javax.swing.JTextField();
+        phoneSignup = new javax.swing.JTextField();
+        jButton19 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         gidisDonusRadioButton = new javax.swing.JRadioButton();
         tekYonRadioButton = new javax.swing.JRadioButton();
@@ -252,9 +277,7 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
 
         ticketFrame.setVisible(false);
-        ticketFrame.setMaximumSize(new java.awt.Dimension(1200, 800));
         ticketFrame.setMinimumSize(new java.awt.Dimension(1200, 800));
-        ticketFrame.setPreferredSize(new java.awt.Dimension(1200, 800));
 
         jPanel5.setMaximumSize(new java.awt.Dimension(1200, 800));
         jPanel5.setPreferredSize(new java.awt.Dimension(1200, 800));
@@ -610,13 +633,23 @@ public class FlightBookingFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jDialog1.setVisible(true);
+        jDialog2.setMaximumSize(new java.awt.Dimension(512, 313));
+        jDialog2.setMinimumSize(new java.awt.Dimension(512, 313));
 
-        jDesktopPane1.setMaximumSize(new java.awt.Dimension(462, 219));
-        jDesktopPane1.setMinimumSize(new java.awt.Dimension(462, 219));
+        jPanel11.setBounds(480,300,480,300);
+        jPanel11.setMaximumSize(new java.awt.Dimension(500, 500));
+        jPanel11.setMinimumSize(new java.awt.Dimension(500, 500));
 
-        jLabel12.setFont(new java.awt.Font("Fira Sans", 1, 18)); // NOI18N
-        jLabel12.setText("Bilet rezervasyonunuz tamamlansın mı?");
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         onaylaButton.setEnabled(false);
         onaylaButton.setText("Onayla");
@@ -643,60 +676,263 @@ public class FlightBookingFrame extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("Bilgilerimi kontrol ettim, onaylıyorum.");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCheckBox2.setText("Bilgilerimi kontrol ettim, onaylıyorum.");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jCheckBox2ActionPerformed(evt);
             }
         });
 
-        jDesktopPane1.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(onaylaButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(iptalButton, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jCheckBox1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel13.setFont(new java.awt.Font("Fira Sans", 1, 18)); // NOI18N
+        jLabel13.setText("Bilet rezervasyonunuz tamamlansın mı?");
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 40, Short.MAX_VALUE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addComponent(onaylaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(64, 64, 64)
-                                .addComponent(iptalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCheckBox2)
+                    .addGroup(jDialog2Layout.createSequentialGroup()
+                        .addComponent(onaylaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(iptalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog2Layout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
+            .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog2Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addContainerGap(70, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
-                .addGap(18, 18, 18)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(onaylaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(iptalButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addComponent(jCheckBox2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(iptalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(onaylaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(100, 100, 100))
+            .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog2Layout.createSequentialGroup()
+                    .addContainerGap(63, Short.MAX_VALUE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(57, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        signUpFrame.setBounds(900,900,800,850);
+        signUpFrame.setMaximumSize(new java.awt.Dimension(1000, 500));
+        signUpFrame.setPreferredSize(new java.awt.Dimension(1000, 500));
+
+        jPanel12.setBackground(new java.awt.Color(0, 51, 102));
+        jPanel12.setMinimumSize(new java.awt.Dimension(32767, 38));
+        jPanel12.setPreferredSize(new java.awt.Dimension(32767, 72));
+
+        jButton15.setBackground(new java.awt.Color(0, 51, 102));
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
+        jButton15.setText("Planla&Uç");
+        jButton15.setBorderPainted(false);
+
+        jButton16.setBackground(new java.awt.Color(0, 51, 102));
+        jButton16.setForeground(new java.awt.Color(255, 255, 255));
+        jButton16.setText("Yardım");
+        jButton16.setBorderPainted(false);
+
+        jButton17.setBackground(new java.awt.Color(0, 51, 102));
+        jButton17.setForeground(new java.awt.Color(255, 255, 255));
+        jButton17.setText("Üye Ol");
+        jButton17.setBorderPainted(false);
+
+        jButton18.setBackground(new java.awt.Color(0, 51, 102));
+        jButton18.setForeground(new java.awt.Color(255, 255, 255));
+        jButton18.setText("Giriş Yap");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(16512, Short.MAX_VALUE)
+                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15894, 15894, 15894))
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                    .addContainerGap(16901, Short.MAX_VALUE)
+                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(15764, 15764, 15764)))
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                    .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel12Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
+        jPanel13.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel12.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 24)); // NOI18N
+        jLabel12.setText("Üye Ol");
+
+        jLabel14.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel14.setText("Soy İsim");
+
+        jLabel15.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel15.setText("Email");
+
+        jLabel16.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel16.setText("İsim");
+
+        jLabel17.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel17.setText("TcNo");
+
+        jLabel18.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel18.setText("Şifre");
+
+        jLabel20.setFont(new java.awt.Font("Fira Sans", 0, 18)); // NOI18N
+        jLabel20.setText("Telefon");
+
+        surnameSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                surnameSignupActionPerformed(evt);
+            }
+        });
+
+        jButton19.setBackground(new java.awt.Color(0, 51, 102));
+        jButton19.setForeground(new java.awt.Color(255, 255, 255));
+        jButton19.setText("Kayıt Ol");
+        jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton19MouseClicked(evt);
+            }
+        });
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nameSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(surnameSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwdSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tcnoSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(phoneSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(115, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(170, 170, 170))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(141, 141, 141))))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(nameSignup)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(surnameSignup, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwdSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tcnoSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(phoneSignup, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(315, 315, 315)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(718, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(176, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout signUpFrameLayout = new javax.swing.GroupLayout(signUpFrame.getContentPane());
+        signUpFrame.getContentPane().setLayout(signUpFrameLayout);
+        signUpFrameLayout.setHorizontalGroup(
+            signUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(signUpFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(signUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        signUpFrameLayout.setVerticalGroup(
+            signUpFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(signUpFrameLayout.createSequentialGroup()
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -724,17 +960,35 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Üye Ol");
         jButton6.setBorderPainted(false);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(0, 51, 102));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Giriş Yap");
+
+        logoutButton.setVisible(false);
+        logoutButton.setBackground(new java.awt.Color(0, 51, 102));
+        logoutButton.setForeground(new java.awt.Color(255, 255, 255));
+        logoutButton.setText("Logout");
+        logoutButton.setActionCommand("[0,51,102]");
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16512, Short.MAX_VALUE)
+                .addContainerGap(15762, Short.MAX_VALUE)
+                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(641, 641, 641)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -751,10 +1005,13 @@ public class FlightBookingFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 6, Short.MAX_VALUE))
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1311,7 +1568,7 @@ public class FlightBookingFrame extends javax.swing.JFrame {
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
         // TODO add your handling code here:
-        jDialog1.setVisible(true);
+        jDialog2.setVisible(true);
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void signupRadioButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupRadioButtonMouseClicked
@@ -1338,28 +1595,6 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         tekYonRadioButton.setSelected(true);
     }//GEN-LAST:event_tekYonRadioButtonMouseClicked
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-        if (jCheckBox1.isSelected()) {
-            onaylaButton.setEnabled(true);
-        } else {
-            onaylaButton.setEnabled(false);
-        }
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void onaylaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onaylaButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_onaylaButtonActionPerformed
-
-    private void iptalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iptalButtonActionPerformed
-        // TODO add your handling code here:
-        jDialog1.setVisible(false);
-    }//GEN-LAST:event_iptalButtonActionPerformed
-
-    private void iptalButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iptalButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iptalButtonMouseClicked
-
     private void onaylaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onaylaButtonMouseClicked
         // TODO add your handling code here:
         String name = nameText.getText().toString();
@@ -1375,7 +1610,7 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         } else if (bayanRadio.isSelected()) {
             gender = GenderType.FEMALE;
         }
-        
+
         if (signupRadioButton.isSelected()) {
             RegisterRequest request = new RegisterRequest(name, surname, phoneNumber, email, tcNo, passwordTextField.getText().toString(), gender, dateOfBirth);
             passengerRepository.registerPassenger(request);
@@ -1384,10 +1619,74 @@ public class FlightBookingFrame extends javax.swing.JFrame {
         Passenger passenger = passengerRepository.getPassengerInformation(email);
 
         ticketRepository.addTicket(passenger.getPassengerId(), flightId);
-        jDialog1.setVisible(false);
+        jDialog2.setVisible(false);
         ticketFrame.setVisible(false);
 
     }//GEN-LAST:event_onaylaButtonMouseClicked
+
+    private void onaylaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onaylaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onaylaButtonActionPerformed
+
+    private void iptalButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iptalButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iptalButtonMouseClicked
+
+    private void iptalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iptalButtonActionPerformed
+        // TODO add your handling code here:
+        jDialog2.setVisible(false);
+    }//GEN-LAST:event_iptalButtonActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox2.isSelected()) {
+            onaylaButton.setEnabled(true);
+        } else {
+            onaylaButton.setEnabled(false);
+        }
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void surnameSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surnameSignupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_surnameSignupActionPerformed
+
+    private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
+        // TODO add your handling code here:
+        String name = nameSignup.getText().toString();
+        String surname = surnameSignup.getText().toString();
+        String email = emailSignup.getText().toString();
+        String phone = phoneNumberText.getText().toString();
+        String tcno = tcNoText.getText().toString();
+        String password = passwordTextField.getText().toString();
+        
+        RegisterRequest request = new RegisterRequest(name, surname, phone, email, tcno, password, GenderType.MALE, LocalDate.now());
+        passengerRepository.registerPassenger(request);
+        logoutButton.setVisible(true);
+        jButton6.setVisible(false);
+        jButton7.setVisible(false);
+        signupRadioButton.setVisible(false);
+        isLoggedIn = true;
+        passengerId = passengerRepository.getPassengerInformation(email).getPassengerId();
+        signUpFrame.setVisible(false);
+    }//GEN-LAST:event_jButton19MouseClicked
+
+    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
+        // TODO add your handling code here:
+        logoutButton.setVisible(false);
+        jButton6.setVisible(true);
+        jButton7.setVisible(true);
+        signupRadioButton.setVisible(true);
+        isLoggedIn = false;
+    }//GEN-LAST:event_logoutButtonMouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        signUpFrame.setVisible(true);
+    }//GEN-LAST:event_jButton6MouseClicked
 
     private String findCityName(int id) {
         for (City city : cityList) {
@@ -1476,6 +1775,7 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser birthDayText;
     private javax.swing.JTextField departureCityText;
     private javax.swing.JTextField destinationCityText;
+    private javax.swing.JTextField emailSignup;
     private javax.swing.JTextField emailText;
     private javax.swing.JRadioButton gidisDonusRadioButton;
     private javax.swing.JButton iptalButton;
@@ -1485,6 +1785,11 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1494,14 +1799,20 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private com.toedter.calendar.JCalendar jCalendar1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JDialog jDialog1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1511,6 +1822,10 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1532,14 +1847,21 @@ public class FlightBookingFrame extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private java.awt.Label label1;
     private java.awt.Label label2;
+    private javax.swing.JButton logoutButton;
+    private javax.swing.JTextField nameSignup;
     private javax.swing.JTextField nameText;
     private javax.swing.JButton onaylaButton;
+    private javax.swing.JTextField passwdSignup;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JTextField phoneNumberText;
+    private javax.swing.JTextField phoneSignup;
+    private javax.swing.JFrame signUpFrame;
     private javax.swing.JRadioButton signupRadioButton;
+    private javax.swing.JTextField surnameSignup;
     private javax.swing.JTextField surnameText;
     private javax.swing.JTextField tcNoText;
+    private javax.swing.JTextField tcnoSignup;
     private javax.swing.JRadioButton tekYonRadioButton;
     private javax.swing.JFrame ticketFrame;
     // End of variables declaration//GEN-END:variables
