@@ -9,7 +9,5 @@ import flightBooking.model.Flight;
 public interface FlightRepository {
 	
 	List<Flight> searchFlights(FlightSearchRequest request);
-	
-	void bookFlight(BookFlightRequest request);
 
 }

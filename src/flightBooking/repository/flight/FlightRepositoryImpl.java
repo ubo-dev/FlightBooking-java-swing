@@ -4,100 +4,68 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import flightBooking.dto.BookFlightRequest;
 import flightBooking.dto.FlightSearchRequest;
 import flightBooking.model.Flight;
-import flightBooking.repository.DatabaseConnection;
 
 public class FlightRepositoryImpl implements FlightRepository {
 
-	DatabaseConnection connection = DatabaseConnection.getInstance();
-	Connection dbConnection = connection.getConnection();
+    private final Connection dbConnection;
 
-	public FlightRepositoryImpl() {
-		createCityTable();
-		createFlightTable();
-	}
+    public FlightRepositoryImpl(Connection connection) {
+        this.dbConnection = connection;
+        createFlightTable();
+    }
 
-	private void createCityTable() {
-		String query = "create table if not exists city ("
-				+ "id INT PRIMARY KEY AUTO_INCREMENT,"
-				+ "name VARCHAR(255) NOT NULL"
-				+ ");";
+    private void createFlightTable() {
+        String query = "CREATE TABLE IF NOT EXISTS flight ("
+                + "flight_id INT PRIMARY KEY AUTO_INCREMENT,"
+                + "city_departure_id INT NOT NULL,"
+                + "city_destination_id INT NOT NULL,"
+                + "capacity INT NOT NULL,"
+                + "booked_seats INT NOT NULL,"
+                + "departure_time DATE NOT NULL,"
+                + "estimated_arrival_time DATE NOT NULL,"
+                + "FOREIGN KEY (city_departure_id) REFERENCES city(id),"
+                + "FOREIGN KEY (city_destination_id) REFERENCES city(id)"
+                + ");";
 
-		try(PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
-			pStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+        try (PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
+            pStatement.executeUpdate();
+        } catch (SQLException e) {
+            // Handle the exception
+            e.printStackTrace();
+        }
+    }
 
-	}
+    public List<Flight> searchFlights(FlightSearchRequest request) {
+        String query = "SELECT * FROM flight WHERE city_departure_id = ? AND city_destination_id = ? AND departure_time = ?;";
+        List<Flight> flights = new ArrayList<>();
 
-	private void createFlightTable() {
-		String query = "create table if not exists flight ("
-				+ "id INT PRIMARY KEY AUTO_INCREMENT,"
-				+ "city_departure_id int NOT NULL,"
-				+ "city_destination_id int NOT NULL,"
-				+ "capacity INT NOT NULL,"
-				+ "bookedSeats INT NOT NULL,"
-				+ "departure_time DATE NOT NULL,"
-				+ "estimated_arrival_time DATE NOT NULL,"
-				+ "foreign key (city_departure_id) references city(id),"
-				+ "foreign key (city_destination_id) references city(id)" +
-				");";
+        try (PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
+            pStatement.setInt(1, request.departureCityId());
+            pStatement.setInt(2, request.destinationCityId());
+            pStatement.setDate(3, Date.valueOf(request.flightDate()));
 
-		try(PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
-			pStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	@Override
-	public List<Flight> searchFlights(FlightSearchRequest request) {
-		String query = "select * from flight where city_departure_id == ? and city_destination_id == ? and departure_time == ?;";
-		ResultSet resultSet = null;
-		try(PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
-			pStatement.setInt(1, request.departureCityId());
-			pStatement.setInt(2, request.destinationCityId());
-			pStatement.setDate(3, Date.valueOf(request.flightDate()));
-			resultSet = pStatement.executeQuery();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		List<Flight> flights = new ArrayList<>();
-		try {
-			while(true) {
-                assert resultSet != null;
-                if (!resultSet.next()) break;
-                Flight flight = new Flight(
-						resultSet.getInt("id"),
-						resultSet.getInt("city_departure_id"),
-						resultSet.getInt("city_destination_id"),
-						resultSet.getInt("capacity"),
-						resultSet.getInt("bookedSeats"),
-						resultSet.getDate("departure_time").toLocalDate(),
-						resultSet.getDate("estimated_arrival_time").toLocalDate()
-				);
-				flights.add(flight);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+            try (ResultSet resultSet = pStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    Flight flight = new Flight(
+                            resultSet.getInt("flight_id"),
+                            resultSet.getInt("city_departure_id"),
+                            resultSet.getInt("city_destination_id"),
+                            resultSet.getInt("capacity"),
+                            resultSet.getInt("booked_seats"),
+                            resultSet.getDate("departure_time").toLocalDate(), // Changed to getDate
+                            resultSet.getDate("estimated_arrival_time").toLocalDate() // Changed to getDate
+                    );
+                    flights.add(flight);
+                }
+            }
+        } catch (SQLException e) {
+            // Handle the exception
+            e.printStackTrace();
+        }
 
-		return flights;
-	}
-
-	@Override
-	public void bookFlight(BookFlightRequest request) {
-		String query = "update flight set bookedSeats = bookedSeats + 1 where id == ?;";
-		try(PreparedStatement pStatement = dbConnection.prepareStatement(query)) {
-			pStatement.setLong(1, request.flightId());
-			pStatement.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		// TODO: ticket repository
-	}
+        return flights;
+    }
 
 }

@@ -1,0 +1,26 @@
+
+•
+java:S1192K"MDefine a constant instead of duplicating this literal "passenger_id" 3 times.(½Èëßıÿÿÿÿ8„µçÒø1J$ad1a63c0-6e2a-451d-bbe0-009f66426944
+
+java:S1192J"JDefine a constant instead of duplicating this literal "ticket_id" 3 times.(¸íÒÂ8„µçÒø1J$5440ca57-da65-40d7-978a-28deabb61102
+
+java:S1192L"JDefine a constant instead of duplicating this literal "flight_id" 3 times.(¢ëÄ8„µçÒø1J$48d117ce-76db-4ddf-a41e-d8355afbeaa3
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥œøšıÿÿÿÿ8†µçÒø1J$3efbbfa0-a359-4f8d-815e-644f663be761
+‘
+java:S2095\"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’Şµ/8œµçÒø1J$bca4d98e-8a0a-4081-b04a-2d91bc8b883c
+‘
+java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’Şµ/8Çı¤Óø1J$94324bc7-3ab0-452d-ad14-cc50ac1548f8
+‘
+java:S2095u"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’Şµ/8œµçÒø1J$a209e704-8b5f-4fb8-a32c-58e03e2957cd
+—
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8œµçÒø1J$036f67ab-34e1-41ee-b53a-da74b9bac587
+‘
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’Şµ/8œµçÒø1J$f93c77cb-c6dd-42a2-925f-cc6572a80691
+‘
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’Şµ/8œµçÒø1J$dbbc0399-1275-4b26-9d37-572fa5ed31d9
+g
+java:S6905B"Don't use the query "SELECT *".(°™¬ùúÿÿÿÿ8¦µçÒø1J$b0f1c636-8965-4b82-846e-94a025db5deb
+b
+java:S6905W"Don't use the query "SELECT *".(ôá£8©µçÒø1J$a63683a7-359c-4b22-a2f8-4a6917be46c7
+b
+java:S6905p"Don't use the query "SELECT *".(çŠ·8­µçÒø1J$0cd7b31a-6a9e-4895-8525-7cf14492bc7d

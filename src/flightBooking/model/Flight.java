@@ -1,86 +1,91 @@
 package flightBooking.model;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Flight {
-	
-	private long flightId;
-	private int cityDepartureId;
-	private int cityDestinationId;
-	private int capacity;
-	private int bookedSeats;
-	private LocalDate departureTime;
-	private LocalDate estimatedArrivalTime;
-	
-	public Flight(long flightId, int cityDepartureId, int cityDestinationId, int capacity, int bookedSeats,
-			LocalDate departureTime, LocalDate estimatedArrivalTime) {
-		super();
-		this.flightId = flightId;
-		this.cityDepartureId = cityDepartureId;
-		this.cityDestinationId = cityDestinationId;
-		this.capacity = capacity;
-		this.bookedSeats = bookedSeats;
-		this.departureTime = departureTime;
-		this.estimatedArrivalTime = estimatedArrivalTime;
-	}
 
-	public long getFlightId() {
-		return flightId;
-	}
+    private long flightId;
+    private int cityDepartureId;
+    private int cityDestinationId;
+    private int capacity;
+    private int bookedSeats;
+    private LocalDate departureTime;
+    private LocalDate estimatedArrivalTime;
 
-	public void setFlightId(long flightId) {
-		this.flightId = flightId;
-	}
+    public Flight(long flightId, int cityDepartureId, int cityDestinationId, int capacity, int bookedSeats,
+            LocalDate departureTime, LocalDate estimatedArrivalTime) {
+        super();
+        this.flightId = flightId;
+        this.cityDepartureId = cityDepartureId;
+        this.cityDestinationId = cityDestinationId;
+        this.capacity = capacity;
+        this.bookedSeats = bookedSeats;
+        this.departureTime = departureTime;
+        this.estimatedArrivalTime = estimatedArrivalTime;
+    }
 
-	public int getCityDepartureId() {
-		return cityDepartureId;
-	}
+    public long getFlightId() {
+        return flightId;
+    }
 
-	public void setCityDepartureId(int cityDepartureId) {
-		this.cityDepartureId = cityDepartureId;
-	}
+    public void setFlightId(long flightId) {
+        this.flightId = flightId;
+    }
 
-	public int getCityDestinationId() {
-		return cityDestinationId;
-	}
+    public int getCityDepartureId() {
+        return cityDepartureId;
+    }
 
-	public void setCityDestinationId(int cityDestinationId) {
-		this.cityDestinationId = cityDestinationId;
-	}
+    public void setCityDepartureId(int cityDepartureId) {
+        this.cityDepartureId = cityDepartureId;
+    }
 
-	public int getCapacity() {
-		return capacity;
-	}
+    public int getCityDestinationId() {
+        return cityDestinationId;
+    }
 
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
+    public void setCityDestinationId(int cityDestinationId) {
+        this.cityDestinationId = cityDestinationId;
+    }
 
-	public int getBookedSeats() {
-		return bookedSeats;
-	}
+    public int getCapacity() {
+        return capacity;
+    }
 
-	public void setBookedSeats(int bookedSeats) {
-		this.bookedSeats = bookedSeats;
-	}
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 
-	public LocalDate getDepartureTime() {
-		return departureTime;
-	}
+    public int getBookedSeats() {
+        return bookedSeats;
+    }
 
-	public void setDepartureTime(LocalDate departureTime) {
-		this.departureTime = departureTime;
-	}
+    public void setBookedSeats(int bookedSeats) {
+        this.bookedSeats = bookedSeats;
+    }
 
-	public LocalDate getEstimatedArrivalTime() {
-		return estimatedArrivalTime;
-	}
+    public LocalDate getDepartureTime() {
+        return departureTime;
+    }
 
-	public void setEstimatedArrivalTime(LocalDate estimatedArrivalTime) {
-		this.estimatedArrivalTime = estimatedArrivalTime;
-	}
+    public void setDepartureTime(LocalDate departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public LocalDate getEstimatedArrivalTime() {
+        return estimatedArrivalTime;
+    }
+
+    public void setEstimatedArrivalTime(LocalDate estimatedArrivalTime) {
+        this.estimatedArrivalTime = estimatedArrivalTime;
+    }
+
+    public boolean bookTickets(int numberOfTickets) {
+        if (bookedSeats + numberOfTickets <= capacity) {
+            bookedSeats += numberOfTickets;
+            return true;
+        }
+        return false;
+    }
 
 }

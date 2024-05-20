@@ -1,0 +1,74 @@
+
+e
+java:S1604ë"(Make this anonymous inner class a lambda(Ü¶¸J$243b5551-8f1c-4a24-8d1d-7ac0ccbddccf
+e
+java:S1604ô"(Make this anonymous inner class a lambda(İ½¾‹J$4d949232-be06-4a7b-89c8-a1a502a421e4
+j
+java:S1604Ì"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿJ$8b505fe4-401c-427a-871c-8539374c340b
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ñÛJ$86fc415e-04e0-4b85-990f-8fc725f8241c
+”
+java:S1450â"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶J$7d474869-6a19-4bfb-a4c4-ec5274d6e550
+™
+java:S1450ã"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿJ$5cba4983-b46b-4641-a1b4-eb549e55ad82
+™
+java:S1450ä"WRemove the "jButton4" field and declare it as a local variable in the relevant methods.(€„ˆÎÿÿÿÿÿJ$491a6b38-a758-4474-b9a0-7a5868d0f221
+™
+java:S1450å"WRemove the "jButton5" field and declare it as a local variable in the relevant methods.(â¦Î©ûÿÿÿÿJ$f54da473-e910-4dd5-b422-120d931ae68e
+”
+java:S1450æ"WRemove the "jButton6" field and declare it as a local variable in the relevant methods.(á®İşJ$c04040f5-8d6f-4362-a0ee-3f901068ba27
+˜
+java:S1450ç"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿJ$e28a4a66-a21c-49c3-92da-748495a7a28c
+˜
+java:S1450è"VRemove the "jPanel2" field and declare it as a local variable in the relevant methods.(õ òçüÿÿÿÿJ$335fd268-4182-4734-adad-dc45890d9f97
+œ
+java:S1450é"ZRemove the "jPopupMenu1" field and declare it as a local variable in the relevant methods.(×È³ÏıÿÿÿÿJ$6df5cbcd-de74-4b21-8bd1-68ce1216acce
+œ
+java:S1450ê"ZRemove the "jPopupMenu2" field and declare it as a local variable in the relevant methods.(”ÆßÛûÿÿÿÿJ$803bd034-9a6a-42b2-8008-0e3855a22704
+—
+java:S1450ë"\Remove the "jRadioButton1" field and declare it as a local variable in the relevant methods.(ò3J$5ab36e8a-10d7-4bb3-8c01-910bc6417da3
+
+java:S1450ì"\Remove the "jRadioButton2" field and declare it as a local variable in the relevant methods.(‘µÅ¨ûÿÿÿÿJ$c81b0be0-6a69-4a23-96a7-13bfdeb0ae02
+k
+java:S1948!"*Make "cityList" transient or serializable.(ÇåÏÆøÿÿÿÿJ$672fad8e-486d-47b3-a653-f84fa368b7cf
+q
+java:S1948#"0Make "cityRepository" transient or serializable.(¶Ÿ¾àÿÿÿÿÿJ$9e6d4a47-349e-447d-a816-3c84ac0754a3
+s
+java:S1948$"2Make "ticketRepository" transient or serializable.(ÊÑ‡¾ÿÿÿÿÿJ$413c450a-17b9-4680-bc1a-f1b1b63cee7d
+n
+java:S1948%"2Make "flightRepository" transient or serializable.(ñØ…ğJ$88693230-92f1-4fde-9495-dfac43808c0a
+q
+java:S1948&"5Make "passengerRepository" transient or serializable.(ñĞJ$73a5c386-3e70-4405-852d-5f53a45473d1
+q
+java:S1948'"5Make "mockDataInitializer" transient or serializable.(ÆùÒÁJ$62588a2f-6f57-4099-9073-132735dabaab
+z
+java:S1155ƒ">Use isEmpty() to check whether the collection is empty or not.(ÍçêAJ$2f405a2b-4275-41f4-9211-0dc14210bad5
+·
+java:S6204"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹J$9bbb1a58-b6f4-4db4-b409-7777c5cfe679
+l
+java:S1172§"*Remove this unused method parameter "evt".(Òµˆ¡øÿÿÿÿJ$85b6fb72-ed8b-4558-a354-b567627516b4
+t
+java:S1135¨"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿJ$a53e99ea-6c9e-4aac-8a88-e22c0a11981a
+l
+java:S1172«"*Remove this unused method parameter "evt".(¥÷ëƒÿÿÿÿÿJ$c470de31-e313-4653-875f-5884342fde7f
+t
+java:S1135¬"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿJ$780a1923-0a71-4a22-a0bc-e810205aefe3
+l
+java:S1197²"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿJ$f2c38f3d-285c-4e1b-82ee-86deaf668996
+‚
+java:S2147Á"ECombine this catch with the one at line 319, which has the same body.(¨¦Š½J$cc1442e0-9d40-4b0c-b14c-e16bcb76ebfa
+‚
+java:S2147Ã"ECombine this catch with the one at line 321, which has the same body.(ã€ J$6733e681-a2f6-4477-be16-54f440253200
+
+java:S2147Å"ECombine this catch with the one at line 323, which has the same body.(ñÎ¯%J$c860530b-11bd-4efb-8163-9180f8d08b4e
+u
+java:S1068$"4Remove this unused "ticketRepository" private field.(ÊÑ‡¾ÿÿÿÿÿJ$69335cfa-dd1f-49c1-b3fc-fb9de27857da
+p
+java:S1068%"4Remove this unused "flightRepository" private field.(ñØ…ğJ$8be5f268-8247-43c4-b0fd-ffb88506d012
+s
+java:S1068&"7Remove this unused "passengerRepository" private field.(ñĞJ$700efa4e-153e-46da-8a98-57dd187d4ca5
+s
+java:S1068'"7Remove this unused "mockDataInitializer" private field.(ÆùÒÁJ$d0aebede-bc6a-4300-b55d-4f2526215bf8
+q
+java:S1068é"/Remove this unused "jPopupMenu1" private field.(×È³ÏıÿÿÿÿJ$392cd2de-0c1d-470d-8792-6d528b200063
+q
+java:S1068ê"/Remove this unused "jPopupMenu2" private field.(”ÆßÛûÿÿÿÿJ$25a67727-0442-4a11-80be-6788d5f44120

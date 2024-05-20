@@ -8,6 +8,7 @@ public class DatabaseConnection {
 
 	private static DatabaseConnection instance;
 	private Connection connection;
+        
 
 	private DatabaseConnection() throws SQLException {
 		// Replace with your connection details
